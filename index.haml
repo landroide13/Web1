@@ -1,0 +1,162 @@
+-activities_gallery=["yo1.jpg","yo3.jpg","yo4.jpg","surf1.jpg","surf2.jpg","surfK.jpg","surfP.jpg","surfP2.jpg","surfC.jpg"]
+!!!5
+%html{class:"no-js",lang:"es"}
+  %head
+    %met{charset:"utf-8"}
+    %title YogaGym
+    %meta{name:"Description",content:""}
+    %link{rel:"stylesheet",href:"css/normalize.css"}
+    %link{rel:"stylesheet",href:"css/bootstrap.css"}
+    %link{rel:"stylesheet",href:"https://fonts.googleapis.com/css?family=Indie+Flower"}
+    %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"}
+    %link{rel:"stylesheet",href:"css/style.css"}
+    %meta{name:"viewport",content:"width=device-width,initial-scale=1"}
+    %meta{:"data-name"=>"imgCounter",content:"#{activities_gallery.size}"}
+    %script{src:"JS/vendor/modernizr-2.8.3.min.no-js"}
+  %body
+    ="<!--[if lt IE 9]>"
+    %p{class:"browserupgrade"}
+    You are using an unupdated
+    %strong browser.
+    Please
+    %a{href:"http//browsehappy.com/"}
+      update you browser
+      for a better experience.
+    ="<![endif]-->"
+    .video-container
+      %video{autoplay:true,loop:true,width:"1280",height:"720",poster:"/videos/Coverr-yoga-2/Coverr-yoga.jpg"}
+        %source{src:"/videos/Coverr-yoga-2/Coverr-yoga.mp4",typ:"video/mp4"}
+        %source{src:"/videos/Coverr-yoga-2/Coverr-yoga.webm",typ:"video/webm"}
+    .row.full-height.middle-xs.center-xs.relative.up#home
+      .col-xs-12
+        .box.white-text
+          %img{src:"/img/om2.jpg",width:90}
+          %h1.yoga.title.no-margin YogaGym
+          %p#is-open
+            %i.glyphicon.glyphicon-time
+            Open Now
+      %nav.fixed.top.right.navegation.white-text#navigation
+        -menu=["Home","Activities","Schedule","Contact"]
+        %ul.list-inline
+          -menu.each do |item|
+            %li
+              %a{}=item
+    .absolute.large-padding.white-text.full-width#description 
+      .row.middle-xs.center-xs
+        .col-xs-7.col-sm-6.white-text.medium 
+          Enjoy the Yoga and the Surf
+        .col-xs.invisible#sticky-navigation
+          .box
+            %nav.text-right.navegation
+              %ul.list-inline
+                -menu.each do |item|
+                  %li
+                    %a{}=item
+                    
+  .text-center.relative#activities
+    .absolute.white#activitie-title
+      %h2.yoga.title Activities
+    -activities_photos=[{name:"HataYoga",image:"yo1"},{name:"Ashtanga",image:"yo3"},{name:"BikramYoga",image:"yo4"},{name:"Rent equitment",image:"surf1"},{name:"TRX",image:"trx1"},{name:"Surf Kids",image:"surfC"},{name:"Padle",image:"SurfP"},{name:"Surf",image:"surf3"}]
+
+    .row
+      -activities_photos.each do |photo|
+        .col-md-4.col-lg-3.col-sm-6.col-xs-12.sport{style:"background-image:url(/img/#{photo[:image]}.jpg)"}
+          .screen
+            .row.middle-xs.full-height
+              .col-xs-12
+                %h3.yoga.white-text.subtitle=photo[:name]
+                
+  #gallery
+    .inner
+      -activities_gallery.each do |image|
+        .image{style:"background-image:url(/img/#{image})"}
+        
+  .container
+    .card.white.black-text.text-center.relative
+      %h3.medium.slim
+        Here
+        %strong.yoga.medium the Yoga is
+        %strong.yoga.medium a life style
+        
+  .black.white-text.full-height#contact
+    .row.middle-xs.full-height
+      .col-xs-12
+        .box
+          %form{action:"https://formspree.io/reysh_2@yahoo.com",method:"POST",id:"contact-form",class:"step-form"}
+            .row.center-xs
+              .col-xs-2.col-md-1
+                .box
+              .col-xs-5
+                .box
+                  %fieldset.step.active
+                    %input{type:"email",name:"email",placeholder:"Email",class:"input",required:"true"}
+                  %fieldset.step
+                    %input{type:"text",name:"name",placeholder:"Name",class:"input",required:"true"}
+                  %fieldset.step    
+                    %textarea{name:"body",placeholder:"Coment",class:"input",required:"true"}
+                    %button{type:"submit",class:"btn btn-success"}
+                      %div
+                        Send
+  
+  
+  %script{src:"https://code.jquery.com/jquery-3.1.1.min.js",integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   ,crossorigin:"anonymous"}
+  
+  
+  %script
+    window.jQuery || document.write("<script src='/JS/vendor/jquery-1.12.0.min.js'><\/script>")
+  %script{src:"/JS/form-ob.js"}   
+  %script{src:"/JS/main.js"} 
+  %script{src:"/JS/step.js"}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
